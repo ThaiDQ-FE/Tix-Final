@@ -6,7 +6,7 @@ class Home extends Component {
   renderMovieList = () => {
     return this.props.movieList.map((movie, index) => {
       return (
-        <div className="col-4">
+        <div className="col-4" key={index}>
           <div className="card text-left">
             <img className="card-img-top" src={movie.hinhAnh} alt="" />
             <div className="card-body">
@@ -25,8 +25,8 @@ class Home extends Component {
   render() {
     if (this.props.loading) {
       return (
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
         </div>
       );
     } else {

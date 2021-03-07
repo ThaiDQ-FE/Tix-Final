@@ -34,17 +34,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    axios({
-      method: "GET",
-      url:
-        "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
-      data: null,
-    })
-      .then((res) => {
-        console.log(res.data);
-        this.props.dispatch(getMovieList(res.data));
-      })
-      .catch((err) => {});
+    this.props.dispatch(getMovieList());
   }
 }
 

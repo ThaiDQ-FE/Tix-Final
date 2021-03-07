@@ -23,14 +23,22 @@ class Home extends Component {
   };
 
   render() {
-    return (
-      <div>
-        <h2>Danh Sách Phim</h2>
-        <div className="container">
-          <div className="row">{this.renderMovieList()}</div>
+    if (this.props.loading) {
+      return (
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <h2>Danh Sách Phim</h2>
+          <div className="container">
+            <div className="row">{this.renderMovieList()}</div>
+          </div>
+        </div>
+      );
+    }
   }
 
   componentDidMount() {
@@ -41,6 +49,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   return {
     movieList: state.movie.movieList,
+    loading: state.common.loading,
   };
 };
 

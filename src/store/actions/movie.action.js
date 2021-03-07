@@ -3,9 +3,11 @@ import {
   GET_MOVIE_LIST_SUCCESS,
   GET_MOVIE_LIST_FAILED,
 } from "../constants/movie.const";
+import { startLoading, stopLoading } from "./common.action";
 
 export const getMovieList = () => {
   return (dispatch) => {
+    dispatch(startLoading());
     axios({
       method: "GET",
       url:
@@ -13,9 +15,11 @@ export const getMovieList = () => {
       data: null,
     })
       .then((res) => {
+        dispatch(stopLoading());
         dispatch(getMovieListSuccess(res.data));
       })
       .catch((err) => {
+        dispatch(stopLoading());
         dispatch(getMovieListFailed(err));
       });
   };

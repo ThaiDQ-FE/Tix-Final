@@ -4,6 +4,7 @@ import User from "../pages/admin/user";
 import Booking from "../pages/user/booking";
 import DetailMovie from "../pages/user/detail-movie";
 import Home from "../pages/user/home";
+import Login from "../pages/user/login";
 
 export const userRouter = [
   {
@@ -20,6 +21,12 @@ export const userRouter = [
     path: "/booking",
     exact: false,
     Component: Booking,
+  },
+  ,
+  {
+    path: "/login",
+    exact: false,
+    Component: Login,
   },
 ];
 

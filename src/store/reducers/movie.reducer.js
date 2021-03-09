@@ -1,10 +1,13 @@
 import {
+  GET_MOVIE_DETAIL_FAILED,
+  GET_MOVIE_DETAIL_SUCCESS,
   GET_MOVIE_LIST_FAILED,
   GET_MOVIE_LIST_SUCCESS,
 } from "../constants/movie.const";
 
 const initialState = {
   movieList: [],
+  movieDetail: {},
   errors: {},
 };
 
@@ -18,6 +21,12 @@ const movieReducer = (state = initialState, action) => {
     case GET_MOVIE_LIST_FAILED: {
       state.errors = payload;
       return { ...state };
+    }
+    case GET_MOVIE_DETAIL_SUCCESS: {
+      return { ...state, movieDetail: payload };
+    }
+    case GET_MOVIE_DETAIL_FAILED: {
+      return { ...state, errors: payload };
     }
     default:
       return state;

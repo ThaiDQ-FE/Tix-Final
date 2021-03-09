@@ -4,23 +4,24 @@ import DetailMovie from "./pages/user/detail-movie";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Booking from "./pages/user/booking";
 import Header from "./components/header";
-
+import { userRouter } from "./configs/router";
+import RouterUserTemplate from "./templates/user";
 function App() {
+  const renderUserRouter = () => {
+    return userRouter.map(({ path, exact, Component }) => {
+      return (
+        <RouterUserTemplate
+          path={path}
+          exact={exact}
+          Component={Component}
+        ></RouterUserTemplate>
+      );
+    });
+  };
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route path="/" exact={true}>
-            <Home />
-          </Route>
-          <Route path="/movie-detail">
-            <DetailMovie />
-          </Route>
-          <Route path="/booking">
-            <Booking />
-          </Route>
-        </Switch>
+        <Switch>{renderUserRouter()}</Switch>
       </BrowserRouter>
     </>
   );

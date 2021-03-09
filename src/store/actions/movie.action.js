@@ -41,13 +41,12 @@ const getMovieListFailed = (err) => {
   };
 };
 
-export const getMovieDetail = () => {
+export const getMovieDetail = (movieCode) => {
   return (dispatch) => {
     dispatch(startLoading());
     axios({
       method: "GET",
-      url:
-        "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=4517",
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${movieCode}`,
       data: null,
     })
       .then((res) => {

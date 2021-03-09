@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getMovieDetail } from "../../../store/actions/movie.action";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import "./styles.scss";
 
 class DetailMovie extends Component {
@@ -13,7 +14,10 @@ class DetailMovie extends Component {
     );
   }
   componentDidMount() {
-    this.props.dispatch(getMovieDetail());
+    const {
+      params: { maPhim },
+    } = this.props.match;
+    this.props.dispatch(getMovieDetail(maPhim));
   }
 }
 const mapStateToProps = (state) => {
@@ -22,4 +26,4 @@ const mapStateToProps = (state) => {
     loading: state.common.loading,
   };
 };
-export default connect(mapStateToProps)(DetailMovie);
+export default connect(mapStateToProps)(withRouter(DetailMovie));

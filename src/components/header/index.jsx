@@ -3,10 +3,69 @@ import { NavLink } from "react-router-dom";
 import "./styles.scss";
 
 function Header() {
+  const handleClickMenu = () => {
+    document.getElementById("sideMenu").classList.add("sideMenu-active");
+  };
+  const handleClickArrow = () => {
+    document.getElementById("sideMenu").classList.remove("sideMenu-active");
+  };
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
+      <div id="home-navbar">
+        <a href="/" className="home-navbar-left">
+          <img src="https://i.ibb.co/nD3sxdP/web-logo.png" alt="web-logo" />
+        </a>
+        <div className="home-navbar-center">
+          <a href="#">Lịch Chiếu</a>
+          <a href="#">Cụm Rạp</a>
+          <a href="#">Tin Tức</a>
+          <a href="#">Ứng dụng</a>
+        </div>
+        <div className="home-navbar-right">
+          <div className="home-navbar-account">
+            <NavLink className="nav-link" to="/login">
+              <img
+                src="https://i.ibb.co/znh3gRK/avatar.png"
+                alt="avatar"
+                border="0"
+              />
+              Đăng Nhập
+            </NavLink>
+          </div>
+        </div>
+        {/* Navbar for mobile */}
+        <div className="home-navbar-mobile">
+          <img
+            src="https://i.ibb.co/XXMfvtT/menu-options.png"
+            alt="menu-options"
+            border="0"
+            onClick={handleClickMenu}
+          />
+        </div>
+        <div id="sideMenu" className="home-navbar-side">
+          <div className="menuMobile customScroll">
+            <div className="menuMoble-first">
+              <NavLink className="nav-link" to="/login">
+                <img
+                  src="https://i.ibb.co/znh3gRK/avatar.png"
+                  alt="avatar"
+                  border="0"
+                />
+                Đăng Nhập
+              </NavLink>
+              <img
+                src="https://i.ibb.co/k3ctpcW/next-session.png"
+                alt="next-session"
+                border="0"
+                className="sideMenu-close icon-arrow-right"
+                onClick={handleClickArrow}
+              ></img>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a className="navbar-brand" href="#xs">
           Navbar
         </a>
         <button
@@ -75,7 +134,7 @@ function Header() {
             </button>
           </form>
         </div>
-      </nav>
+      </nav> */}
     </header>
   );
 }

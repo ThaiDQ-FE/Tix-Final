@@ -1,12 +1,13 @@
 import React from "react";
 import { Route } from "react-router";
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 function UserTemplate(props) {
   return (
     <>
       <Header />
       <main>{props.children}</main>
-      <footer></footer>
+      <Footer />
     </>
   );
 }

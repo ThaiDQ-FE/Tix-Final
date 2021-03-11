@@ -1,0 +1,39 @@
+.carousel-wrapper {
+    margin-top: 60px;
+    .swiper-container {
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: rgba(124, 122, 122, 0.5);
+        }
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: white;
+                width: 12px;
+                height: 12px;
+                opacity: 0.8;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: rgb(226, 42, 42);
+            }
+        }
+        .swiper-wrapper {
+            .swiper-slide {
+                height: unset;
+                .carousel-images {
+                    height: 100%;
+                    width: 100%;
+                    box-sizing: border-box;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 578px) {
+    .carousel-wrapper {
+        .swiper-container {
+            display: none;
+        }
+    }
+}

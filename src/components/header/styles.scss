@@ -87,15 +87,16 @@
             transition: all 0.4s;
             overflow: hidden;
 
-            .menuMoble-first {
+            .menuMobile-first {
                 position: relative;
                 padding: 10px;
+                display: flex;
                 a {
                     color: #383737;
                     margin: inherit;
                     font-size: 13px;
                     font-weight: bold;
-                    width: 30%;
+                    width: 90%;
                     img {
                         height: auto;
                         width: 30px;
@@ -124,6 +125,20 @@
         pointer-events: initial;
         .menuMobile {
             right: 0;
+        }
+    }
+}
+
+@media (max-width: 436px) {
+    #home-navbar {
+        #sideMenu {
+            .menuMobile {
+                .menuMobile-first {
+                    a {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

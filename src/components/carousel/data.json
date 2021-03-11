@@ -1,0 +1,35 @@
+[
+    {
+        "maPhim": 1,
+        "tenPhim": "Gái Già Lắm Chiêu",
+        "biDanh": "Gái Già Lắm Chiêu",
+        "trailer": "https://www.youtube.com/embed/yiBo3wgJ860",
+        "hinhAnh": "https://i.ibb.co/qmDkt7d/gai-gia-lam-chieu-v-16152893212536.jpg",
+        "moTa": "Gái Già Lắm Chiêu V - Những Cuộc Đời Vương Giả",
+        "maNhom": "GP01",
+        "ngayKhoiChieu": "2021-03-12T00:00:00",
+        "danhGia": 6.9
+    },
+    {
+        "maPhim": 2,
+        "tenPhim": "Bố Già",
+        "biDanh": "Bố Già",
+        "trailer": null,
+        "hinhAnh": "https://i.ibb.co/jZ4NBC6/bo-gia-16146819941008.png",
+        "moTa": "Bố Già - Một tác phẩm của Trấn Thành",
+        "maNhom": "GP01",
+        "ngayKhoiChieu": "2021-03-12T00:00:00",
+        "danhGia": 8.1
+    },
+    {
+        "maPhim": 3,
+        "tenPhim": "PALM SPRINGS: Mở mắt thấy hôm qua",
+        "biDanh": "PALM SPRINGS: Mở mắt thấy hôm qua",
+        "trailer": null,
+        "hinhAnh": "https://i.ibb.co/k4S21G2/palm-springs-16146820863959.jpg",
+        "moTa": "PALM SPRINGS: Mở mắt thấy hôm qua",
+        "maNhom": "GP01",
+        "ngayKhoiChieu": "2021-03-12T00:00:00",
+        "danhGia": 7.9
+    }
+]

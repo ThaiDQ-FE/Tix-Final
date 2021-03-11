@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Carousel from "../../../components/carousel";
 import MovieCart from "../../../components/movie-cart";
 import { getMovieList } from "../../../store/actions/movie.action";
 class Home extends Component {
@@ -23,6 +24,7 @@ class Home extends Component {
     } else {
       return (
         <div>
+          <Carousel />
           <h2>Danh Sách Phim</h2>
           <div className="container">
             <div className="row">{this.renderMovieList()}</div>

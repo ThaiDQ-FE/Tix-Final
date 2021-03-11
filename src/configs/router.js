@@ -22,7 +22,9 @@ export const userRouter = [
     exact: false,
     Component: Booking,
   },
-  ,
+];
+
+export const loginRouter = [
   {
     path: "/login",
     exact: false,

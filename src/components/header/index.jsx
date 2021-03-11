@@ -44,7 +44,7 @@ function Header() {
         </div>
         <div id="sideMenu" className="home-navbar-side">
           <div className="menuMobile customScroll">
-            <div className="menuMoble-first">
+            <div className="menuMobile-first">
               <NavLink className="nav-link" to="/login">
                 <img
                   src="https://i.ibb.co/znh3gRK/avatar.png"

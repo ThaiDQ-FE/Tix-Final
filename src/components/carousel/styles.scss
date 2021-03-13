@@ -11,19 +11,43 @@
                 width: 12px;
                 height: 12px;
                 opacity: 0.8;
+                &:focus {
+                    outline: none;
+                }
             }
             .swiper-pagination-bullet-active {
                 background-color: rgb(226, 42, 42);
             }
         }
+        .swiper-pagination-bullets {
+            bottom: 30px;
+        }
         .swiper-wrapper {
             .swiper-slide {
                 height: unset;
+                .carousel-play {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    opacity: 0;
+                }
                 .carousel-images {
                     height: 100%;
                     width: 100%;
                     box-sizing: border-box;
                     display: block;
+                }
+            }
+        }
+        &:hover {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .carousel-play {
+                        opacity: 1;
+                    }
                 }
             }
         }

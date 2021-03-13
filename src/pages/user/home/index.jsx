@@ -25,10 +25,10 @@ class Home extends Component {
       return (
         <div>
           <Carousel />
-          <h2>Danh Sách Phim</h2>
+          {/* <h2>Danh Sách Phim</h2>
           <div className="container">
             <div className="row">{this.renderMovieList()}</div>
-          </div>
+          </div> */}
         </div>
       );
     }

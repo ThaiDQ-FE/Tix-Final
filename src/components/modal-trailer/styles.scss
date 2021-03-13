@@ -1,0 +1,16 @@
+.modal-trailer-close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.5s;
+    &:hover {
+        opacity: 1;
+    }
+}
+.modal-trailer-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

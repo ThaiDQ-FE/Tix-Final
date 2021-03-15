@@ -46,18 +46,39 @@ function Login() {
       <div className="container">
         <div className="forms-container">
           <div className="signin-signup">
-            <form action="#" className="sign-in-form">
-              <h2 className="title">Sign in</h2>
+            <form onSubmit={handleSubmit} className="sign-in-form">
+              <NavLink to="/">
+                <img
+                  className="title"
+                  src="https://i.ibb.co/8mVr0DS/group-2x.png"
+                  alt="group-2x"
+                />
+              </NavLink>
               <div className="input-field">
                 <i className="fa fa-user" />
-                <input type="text" placeholder="Tài Khoản" />
+                <input
+                  type="text"
+                  placeholder="Tài Khoản"
+                  name="taiKhoan"
+                  onChange={handleChange}
+                />
               </div>
               <div className="input-field">
                 <i className="fa fa-lock" />
-                <input type="password" placeholder="Mật Khẩu" />
+                <input
+                  type="password"
+                  placeholder="Mật Khẩu"
+                  name="matKhau"
+                  onChange={handleChange}
+                />
               </div>
-              <input type="submit" defaultValue="Login" className="btn solid" />
-              <p className="social-text">Or Sign in with social platforms</p>
+              <input
+                type="submit"
+                defaultValue="Login"
+                className="btn solid"
+                value="Đăng Nhập"
+              />
+              <p className="social-text">Hoặc</p>
               <div className="social-media">
                 <img
                   className="social-icon"
@@ -77,7 +98,13 @@ function Login() {
               </div>
             </form>
             <form action="#" className="sign-up-form">
-              <h2 className="title">Sign up</h2>
+              <NavLink to="/">
+                <img
+                  className="title-two"
+                  src="https://i.ibb.co/8mVr0DS/group-2x.png"
+                  alt="group-2x"
+                />
+              </NavLink>
               <div className="input-field">
                 <i className="fas fa-user" />
                 <input type="text" placeholder="Username" />
@@ -102,38 +129,22 @@ function Login() {
                 <i className="fas fa-user" />
                 <input type="text" placeholder="Username" />
               </div>
-              <input type="submit" className="btn" defaultValue="Sign up" />
-              <p className="social-text">Or Sign up with social platforms</p>
-              <div className="social-media">
-                <img
-                  className="social-icon"
-                  src="https://i.ibb.co/82dNbSw/facebook.png"
-                  alt="facebook"
-                />
-                <img
-                  className="social-icon"
-                  src="https://i.ibb.co/0216T1t/twitter-1.png"
-                  alt="twitter-1"
-                />
-                <img
-                  className="social-icon"
-                  src="https://i.ibb.co/HBhvtjg/search-1.png"
-                  alt="search-1"
-                />
-              </div>
+              <input
+                type="submit"
+                className="btn"
+                defaultValue="Sign up"
+                value="Đăng Ký"
+              />
             </form>
           </div>
         </div>
         <div className="panels-container">
           <div className="panel left-panel">
             <div className="content">
-              <h3>New here ?</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Debitis, ex ratione. Aliquid!
-              </p>
+              <h3>Người mới ?</h3>
+              <p>Đăng ký để được nhiều ưu đãi, mua vé và bảo mật thông tin!</p>
               <button className="btn transparent" id="sign-up-btn">
-                Sign up
+                Đăng Ký
               </button>
             </div>
             <img
@@ -144,13 +155,12 @@ function Login() {
           </div>
           <div className="panel right-panel">
             <div className="content">
-              <h3>One of us ?</h3>
+              <h3>Thành viên kỳ cựu ?</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                laboriosam ad deleniti.
+                Đăng nhập để được nhiều ưu đãi, mua vé và bảo mật thông tin!
               </p>
               <button className="btn transparent" id="sign-in-btn">
-                Sign in
+                Đăng Nhập
               </button>
             </div>
             <img

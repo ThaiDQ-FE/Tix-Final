@@ -17,10 +17,12 @@ export const postLogin = (taiKhoan, matKhau, history) => {
         console.log(res.data);
         dispatch(postLoginSuccess(res.data));
         history.goBack();
+        console.log("thành công");
       })
       .catch((err) => {
         dispatch(stopLoading());
         dispatch(postLoginFailed(err));
+        console.log("thất bại");
       });
   };
 };

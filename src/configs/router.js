@@ -5,6 +5,7 @@ import Booking from "../pages/user/booking";
 import DetailMovie from "../pages/user/detail-movie";
 import Home from "../pages/user/home";
 import Login from "../pages/user/login";
+import LoadingLogin from "../pages/user/login/loadingLogin";
 
 export const userRouter = [
   {
@@ -28,7 +29,7 @@ export const loginRouter = [
   {
     path: "/login",
     exact: false,
-    Component: Login,
+    Component: LoadingLogin,
   },
 ];
 

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { postLogin, postRegister } from "../../../store/actions/user.action";
 import { NavLink, useHistory } from "react-router-dom";
-import TextField from "@material-ui/core/TextField";
 import "./styles.scss";
-import { CircularProgress } from "@material-ui/core";
 
 function Login() {
   const result = useState({});

@@ -7,7 +7,7 @@ function MovieCart({ movie, history }) {
   };
   return (
     <div className="card text-left">
-      <img className="card-img-top" src={movie.hinhAnh} alt="" />
+      <img className="card-img-top" src={movie.hinhAnh} alt="hinh anh" />
       <div className="card-body">
         <h4 className="card-title">Title</h4>
         <p className="card-text">Body</p>

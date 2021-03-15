@@ -36,7 +36,7 @@ function Carousel() {
               onClick={() => handleOpen(movie.trailer)}
             ></img>
           ) : null}
-          <img className="carousel-images" src={movie.hinhAnh} alt="" />
+          <img className="carousel-images" src={movie.hinhAnh} alt="hinh anh" />
         </SwiperSlide>
       );
     });

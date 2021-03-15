@@ -98,6 +98,28 @@ form.sign-in-form {
     font-size: 1.1rem;
     color: #333;
 }
+.input-field select {
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    text-align-last: center;
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+}
 
 .input-field input::placeholder {
     color: #aaa;
@@ -271,7 +293,7 @@ form.sign-in-form {
 
 @media (max-width: 870px) {
     .container {
-        // min-height: 800px;
+        min-height: 800px;
         height: 100vh;
     }
     .signin-signup {
@@ -370,7 +392,7 @@ form.sign-in-form {
     }
 
     .container.sign-up-mode .signin-signup {
-        top: 3%;
+        top: 1%;
         transform: translate(-50%, 0);
     }
 }

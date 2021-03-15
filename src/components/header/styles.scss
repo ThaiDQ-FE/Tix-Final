@@ -50,7 +50,19 @@
                     height: auto;
                     width: 30px;
                     border-radius: 25px;
-                    margin-right: 5px;
+                    top: 50%;
+                    right: 47px;
+                    transform: translate(-47px, -50%);
+                    position: absolute;
+                }
+                p {
+                    padding-left: 15px;
+                    display: inline-block;
+                    position: absolute;
+                    right: 5px;
+                    width: 90px;
+                    top: 50%;
+                    transform: translate(-5px, -50%);
                 }
             }
         }

@@ -34,7 +34,7 @@ function Header() {
                 alt="avatar"
                 border="0"
               />
-              Đăng Nhập
+              <p>Đăng Nhập</p>
             </NavLink>
           </div>
         </div>

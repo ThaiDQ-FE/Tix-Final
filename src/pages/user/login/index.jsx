@@ -15,13 +15,13 @@ function Login() {
   });
   const [userRegister, setUserRegister] = useState({
     users: {
-      dkTaiKhoan: "",
-      dkMatKhau: "",
-      dkEmail: "",
-      dkHoTen: "",
-      dkMaNhom: "",
-      dkMaLoaiNguoiDung: "KhachHang",
-      dkDienThoai: "",
+      taiKhoan: "",
+      matKhau: "",
+      email: "",
+      hoTen: "",
+      maNhom: "",
+      maLoaiNguoiDung: "KhachHang",
+      soDt: "",
     },
   });
   const handleChange = (event) => {
@@ -143,7 +143,7 @@ function Login() {
                   <input
                     type="text"
                     placeholder="Tài Khoản"
-                    name="dkTaiKhoan"
+                    name="taiKhoan"
                     onChange={handleChangeRegister}
                   />
                 </div>
@@ -152,7 +152,7 @@ function Login() {
                   <input
                     type="password"
                     placeholder="Mật Khẩu"
-                    name="dkMatKhau"
+                    name="matKhau"
                     onChange={handleChangeRegister}
                   />
                 </div>
@@ -161,7 +161,7 @@ function Login() {
                   <input
                     type="email"
                     placeholder="Email"
-                    name="dkEmail"
+                    name="email"
                     onChange={handleChangeRegister}
                   />
                 </div>
@@ -170,7 +170,7 @@ function Login() {
                   <input
                     type="number"
                     placeholder="Số Điện Thoại"
-                    name="dkDienThoai"
+                    name="soDt"
                     onChange={handleChangeRegister}
                   />
                 </div>
@@ -179,12 +179,12 @@ function Login() {
                   <input
                     type="text"
                     placeholder="Họ Tên"
-                    name="dkHoTen"
+                    name="hoTen"
                     onChange={handleChangeRegister}
                   />
                 </div>
                 <div className="input-field">
-                  <select name="dkMaNhom" onChange={handleChangeRegister}>
+                  <select name="maNhom" onChange={handleChangeRegister}>
                     <option value="" selected disabled hidden>
                       Choose here
                     </option>

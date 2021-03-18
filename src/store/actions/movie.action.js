@@ -9,19 +9,19 @@ import { startLoading, stopLoading } from "./common.action";
 
 export const getMovieList = () => {
   return (dispatch) => {
-    dispatch(startLoading());
+    // dispatch(startLoading());
     axios({
       method: "GET",
       url:
-        "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
+        "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP10",
       data: null,
     })
       .then((res) => {
-        dispatch(stopLoading());
+        // dispatch(stopLoading());
         dispatch(getMovieListSuccess(res.data));
       })
       .catch((err) => {
-        dispatch(stopLoading());
+        // dispatch(stopLoading());
         dispatch(getMovieListFailed(err));
       });
   };

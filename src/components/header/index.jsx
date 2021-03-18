@@ -18,10 +18,10 @@ function Header() {
     <header>
       <div id="home-navbar">
         <a href="/" className="home-navbar-left">
-          <img src="https://i.ibb.co/nD3sxdP/web-logo.png" alt="web-logo" />
+          <img src="https://i.ibb.co/P919Hd9/catMovie.png" alt="web-logo" />
         </a>
         <div className="home-navbar-center">
-          <a href="#">Lịch Chiếu</a>
+          <a href="#newIn-wrapper">Lịch Chiếu</a>
           <a href="#">Cụm Rạp</a>
           <a href="#">Tin Tức</a>
           <a href="#">Ứng dụng</a>

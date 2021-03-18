@@ -40,11 +40,9 @@ function ModalTrailer(props) {
     </div>
   );
   return (
-    <div>
-      <Modal open={props.open} onClose={props.close}>
-        {body}
-      </Modal>
-    </div>
+    <Modal open={props.open} onClose={props.close}>
+      {body}
+    </Modal>
   );
 }
 export default ModalTrailer;

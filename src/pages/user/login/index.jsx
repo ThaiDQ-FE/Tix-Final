@@ -186,7 +186,7 @@ function Login() {
                 <div className="input-field">
                   <select name="maNhom" onChange={handleChangeRegister}>
                     <option value="" selected disabled hidden>
-                      Choose here
+                      Mã Nhóm
                     </option>
                     {[...Array(10)].map((item, index) => {
                       return (

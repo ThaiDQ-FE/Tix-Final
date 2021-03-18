@@ -1,0 +1,18 @@
+.home-newin {
+    margin: auto;
+    position: relative;
+    &::before {
+        content: "";
+        background: url(https://i.ibb.co/34NCbdX/wallup-net.jpg);
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // height: calc(100% - 39px);
+        height: 100%;
+    }
+}

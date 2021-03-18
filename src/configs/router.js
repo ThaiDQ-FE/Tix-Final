@@ -4,6 +4,7 @@ import User from "../pages/admin/user";
 import Booking from "../pages/user/booking";
 import DetailMovie from "../pages/user/detail-movie";
 import Home from "../pages/user/home";
+import LoadingHome from "../pages/user/home/loadingHome";
 import Login from "../pages/user/login";
 import LoadingLogin from "../pages/user/login/loadingLogin";
 
@@ -11,7 +12,7 @@ export const userRouter = [
   {
     path: "/",
     exact: true,
-    Component: Home,
+    Component: LoadingHome,
   },
   {
     path: "/movie-detail/:maPhim",

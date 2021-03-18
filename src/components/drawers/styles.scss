@@ -5,6 +5,7 @@
 }
 .drawer-wrapper {
     padding: 15px;
+    width: 100%;
     .drawer-login-title {
         position: relative;
         .drawer-nav-link {
@@ -21,6 +22,12 @@
                     text-decoration: none;
                     color: rgb(202, 56, 56);
                 }
+            }
+            p {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
             }
             &:hover {
                 text-decoration: none;

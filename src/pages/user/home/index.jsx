@@ -1,41 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Carousel from "../../../components/carousel";
-import MovieCart from "../../../components/movie-cart";
-import { getMovieList } from "../../../store/actions/movie.action";
+import NewIn from "../../../components/new-in";
+import "./styles.scss";
+const Background = "https://i.ibb.co/5rQSh8d/back-news.png";
 class Home extends Component {
-  renderMovieList = () => {
-    return this.props.movieList.map((movie, index) => {
-      return (
-        <div className="col-4" key={index}>
-          <MovieCart movie={movie} />
-        </div>
-      );
-    });
-  };
-
   render() {
-    if (this.props.loading) {
-      return (
-        <div className="spinner-border" role="status">
-          <span className="sr-only">Loading...</span>
+    return (
+      <>
+        <Carousel />
+        <div className="home-newin">
+          <NewIn />
+          <div
+            className="home-space"
+            style={{ backgroundImage: `url(${Background})` }}
+          ></div>
         </div>
-      );
-    } else {
-      return (
-        <div>
-          <Carousel />
-          {/* <h2>Danh Sách Phim</h2>
-          <div className="container">
-            <div className="row">{this.renderMovieList()}</div>
-          </div> */}
-        </div>
-      );
-    }
-  }
-
-  componentDidMount() {
-    this.props.dispatch(getMovieList());
+      </>
+    );
   }
 }
 

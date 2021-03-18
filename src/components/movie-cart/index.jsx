@@ -1,21 +1,27 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
+import "./styles.scss";
 function MovieCart({ movie, history }) {
   const handleClick = () => {
     history.push(`/movie-detail/${movie.maPhim}`);
   };
   return (
-    <div className="card text-left">
-      <img className="card-img-top" src={movie.hinhAnh} alt="hinh anh" />
-      <div className="card-body">
-        <h4 className="card-title">Title</h4>
-        <p className="card-text">Body</p>
-      </div>
-      <div className="cart-footer">
-        <button className="btn btn-info" onClick={handleClick}>
-          Xem Chi Tiết
-        </button>
+    <div className="card-movie">
+      <div className="film">
+        <div className="film-warpper" onClick={handleClick}>
+          <div
+            className="film-thumbnail"
+            style={{ backgroundImage: `url(${movie.hinhAnh})` }}
+          ></div>
+          <div className="film-info">
+            <span>{movie.tenPhim}</span>
+            <a href="#" className="film-link">
+              <img src="https://i.ibb.co/J3M5w4M/ticket.png" alt="ticket" />
+              &emsp;Mua Vé
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

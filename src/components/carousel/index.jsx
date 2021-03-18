@@ -54,6 +54,9 @@ function Carousel() {
         {renderCarousel()}
       </Swiper>
       <ModalTrailer open={open} close={handleClose} trailer={detailTrailer} />
+      <div className="carousel-img">
+        <img src="https://i.ibb.co/wJbKdnq/scroll-down.png" alt="scroll-down" />
+      </div>
     </div>
   );
 }

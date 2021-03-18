@@ -1,0 +1,37 @@
+.newIn-wrapper {
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 75px;
+    position: relative;
+
+    .Mui-selected {
+        font-size: 24px !important;
+        color: #d4dd29;
+    }
+    .home-space {
+        padding-top: 120px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        max-width: 940px;
+    }
+}
+@media (max-width: 992px) {
+    .newIn-wrapper {
+        padding-top: 30px !important;
+    }
+}
+@media (min-width: 1220px) and (max-width: 1443px) {
+    .newIn-wrapper {
+        max-width: 1220px;
+    }
+}
+@media (min-width: 997px) and (max-width: 1219px) {
+    .newIn-wrapper {
+        max-width: 997px;
+    }
+}
+@media (min-width: 775px) and (max-width: 996) {
+    .newIn-wrapper {
+        max-width: 775px;
+    }
+}

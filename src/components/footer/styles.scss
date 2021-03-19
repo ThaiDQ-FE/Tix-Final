@@ -1,0 +1,87 @@
+.footer {
+    background-color: #222;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #949494;
+    .footer-container {
+        max-width: 940px;
+        margin: auto;
+        .footer-company {
+            display: flex;
+            .footer-qa {
+                display: inline-block;
+                .footer-qaContentOne,
+                .footer-qaContentTwo {
+                    display: inline-block;
+                    a {
+                        text-decoration: none;
+                        font-size: 12px !important;
+                        font-size: 80%;
+                        font-weight: 700;
+                        white-space: nowrap;
+                        color: #949494;
+                        display: block;
+                        transition: all 0.2s;
+                        line-height: 2.3;
+                        transition: all 0.5s;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .footer-partner {
+                display: inline-block;
+                .footer-partnerCompany {
+                    display: inline-block;
+                    a {
+                        img {
+                            border-radius: 50%;
+                            height: 30px;
+                            width: 30px;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-title {
+            color: #fff;
+            font-size: 80%;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .footer-qa,
+    .footer-partner {
+        width: 33.33333333%;
+    }
+    .footer-6 {
+        width: 50%;
+    }
+}
+@media (max-width: 767.99px) {
+    .footer-qa,
+    .footer-partner {
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .hideOnMobile {
+        display: none !important;
+    }
+    .footer {
+        .footer-qaContentTwo {
+            a {
+                display: inline-block !important;
+                margin: 5px;
+            }
+        }
+    }
+    .mobile-first {
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}

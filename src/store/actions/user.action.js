@@ -1,10 +1,5 @@
 import axios from "axios";
-import {
-  LOGIN_FAILED,
-  LOGIN_SUCCESS,
-  REGISTER_FAILED,
-  REGISTER_SUCCESS,
-} from "../constants/user.const";
+import { LOGIN_FAILED, LOGIN_SUCCESS } from "../constants/user.const";
 import { startLoading, stopLoading } from "./common.action";
 import Swal from "sweetalert2";
 export const postLogin = (taiKhoan, matKhau, history) => {
@@ -21,6 +16,7 @@ export const postLogin = (taiKhoan, matKhau, history) => {
       .then((res) => {
         dispatch(stopLoading());
         dispatch(postLoginSuccess(res.data));
+        localStorage.setItem("userInfo", JSON.stringify(res.data));
         Swal.fire({
           icon: "success",
           title: "Đăng nhập thành công!",

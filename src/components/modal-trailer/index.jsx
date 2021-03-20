@@ -24,24 +24,41 @@ const useStyles = makeStyles((theme) => ({
 }));
 function ModalTrailer(props) {
   const classes = useStyles();
-  const body = (
-    <div className={classes.paper}>
-      <img
-        className="modal-trailer-close"
-        src="https://i.ibb.co/9sLW6gQ/close.png"
-        alt="close"
-        onClick={props.close}
-      />
-      <iframe
-        src={props.trailer + `?autoplay=1`}
-        allow={Autoplay}
-        className="modal-trailer-iframe"
-      ></iframe>
-    </div>
-  );
+  const renderBody = () => {
+    if (props.profile) {
+      return (
+        <div className={classes.paper}>
+          <img
+            className="modal-trailer-close"
+            src="https://i.ibb.co/9sLW6gQ/close.png"
+            alt="close"
+            onClick={props.close}
+          />
+          <p>Đặng Quốc thái</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className={classes.paper}>
+          <img
+            className="modal-trailer-close"
+            src="https://i.ibb.co/9sLW6gQ/close.png"
+            alt="close"
+            onClick={props.close}
+          />
+          <iframe
+            src={props.trailer + `?autoplay=1`}
+            allow={Autoplay}
+            className="modal-trailer-iframe"
+          ></iframe>
+        </div>
+      );
+    }
+  };
+
   return (
     <Modal open={props.open} onClose={props.close}>
-      {body}
+      {renderBody()}
     </Modal>
   );
 }

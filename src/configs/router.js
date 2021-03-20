@@ -7,6 +7,7 @@ import Home from "../pages/user/home";
 import LoadingHome from "../pages/user/home/loadingHome";
 import Login from "../pages/user/login";
 import LoadingLogin from "../pages/user/login/loadingLogin";
+import ShowTime from "../pages/user/shows-time";
 
 export const userRouter = [
   {
@@ -23,6 +24,11 @@ export const userRouter = [
     path: "/booking",
     exact: false,
     Component: Booking,
+  },
+  {
+    path: "/shows-time",
+    exact: false,
+    Component: ShowTime,
   },
 ];
 

@@ -37,7 +37,7 @@ const theme = createMuiTheme({
         alignItems: "center",
       },
       elevation4: {
-        boxShadow: "unset",
+        boxShadow: "unset !important",
       },
     },
     MuiAppBar: {

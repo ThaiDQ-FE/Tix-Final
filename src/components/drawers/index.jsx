@@ -11,6 +11,41 @@ function DrawerComponent(props) {
     },
   });
   const classes = useStyles();
+  const isLogin = JSON.parse(localStorage.getItem("userInfo"));
+  const renderAccount = () => {
+    if (isLogin == null) {
+      return (
+        <div className="drawer-login-title">
+          <NavLink to="/login" className="drawer-nav-link">
+            <img src="https://i.ibb.co/znh3gRK/avatar.png" alt="avatar" />
+
+            <p>Đăng Nhập</p>
+          </NavLink>
+          <img
+            className="drawer-close"
+            src="https://i.ibb.co/k3ctpcW/next-session.png"
+            alt="next-session"
+            onClick={props.toggleDrawer}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className="drawer-login-title">
+          <div to="/login" className="drawer-nav-link">
+            <img src="https://i.ibb.co/znh3gRK/avatar.png" alt="avatar" />
+            <p>{isLogin.hoTen}</p>
+          </div>
+          <img
+            className="drawer-close"
+            src="https://i.ibb.co/k3ctpcW/next-session.png"
+            alt="next-session"
+            onClick={props.toggleDrawer}
+          />
+        </div>
+      );
+    }
+  };
   return (
     <div>
       <Drawer
@@ -20,19 +55,7 @@ function DrawerComponent(props) {
         onClose={props.toggleDrawer}
       >
         <div className="drawer-wrapper">
-          <div className="drawer-login-title">
-            <NavLink to="/login" className="drawer-nav-link">
-              <img src="https://i.ibb.co/znh3gRK/avatar.png" alt="avatar" />
-
-              <p>Đăng Nhập</p>
-            </NavLink>
-            <img
-              className="drawer-close"
-              src="https://i.ibb.co/k3ctpcW/next-session.png"
-              alt="next-session"
-              onClick={props.toggleDrawer}
-            />
-          </div>
+          {renderAccount()}
           <a
             className="drawer-title-display"
             href={window.location.pathname !== "/" ? "/" : "#newIn-wrapper"}

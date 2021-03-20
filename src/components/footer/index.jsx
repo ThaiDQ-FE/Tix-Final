@@ -98,7 +98,68 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div className="footer-social"></div>
+          <div className="footer-social">
+            <div className="f-app  hideOnMobile">
+              <p className="footer-title title-center">MOBILE APP</p>
+              <a href="#">
+                <img
+                  src="https://i.ibb.co/5kpYbrM/android-logo.png"
+                  alt="android-logo"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://i.ibb.co/S38zcVY/apple-logo.png"
+                  alt="apple-logo"
+                />
+              </a>
+            </div>
+            <div className="f-social">
+              <p className="footer-title title-center hideOnMobile">SOCIAL</p>
+              <a href="#">
+                <img
+                  src="https://i.ibb.co/RpWk8hy/facebook-logo.png"
+                  alt="facebook-logo"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://i.ibb.co/QPg3J3g/zalo-logo.png"
+                  alt="zalo-logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-info">
+          <div className="footer-imageLogo">
+            <img src="https://i.ibb.co/B2kGbQZ/zion-logo.jpg" alt="zion-logo" />
+          </div>
+          <div className="footer-content">
+            <span className="footer-title">
+              TIX - sản phẩm cuối khóa Front-End [CYBERSOFT-ACADEMY]
+            </span>
+            <span>
+              Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
+              Chí Minh, Việt Nam.
+            </span>
+            <span>
+              Giấy chứng nhận đăng ký kinh doanh số: 0101659783,
+              <br />
+              đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
+              hoạch và đầu tư Thành phố Hồ Chí Minh cấp.
+            </span>
+            <span>Số Điện Thoại (Hotline): 1900 545 436</span>
+            <span>Email: support@tix.vn</span>
+          </div>
+          <div className="footer-cer">
+            <a href="#">
+              <img
+                src="https://i.ibb.co/pxnzvrf/d1e6bd560daa9e20131ea8a0f62e87f8.png"
+                alt="d1e6bd560daa9e20131ea8a0f62e87f8"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

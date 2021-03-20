@@ -8,6 +8,8 @@
         margin: auto;
         .footer-company {
             display: flex;
+            border-bottom: 1px solid #4a4a4a;
+            padding-bottom: 20px;
             .footer-qa {
                 display: inline-block;
                 .footer-qaContentOne,
@@ -44,26 +46,95 @@
                     }
                 }
             }
+            .footer-social {
+                display: flex;
+                justify-content: space-around;
+                .f-app,
+                .f-social {
+                    a {
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
         }
         .footer-title {
             color: #fff;
             font-size: 80%;
         }
+        .title-center {
+            text-align: center;
+        }
+        .footer-info {
+            display: flex;
+            padding-top: 20px;
+            .footer-imageLogo {
+                text-align: center;
+                img {
+                    border-radius: 8px;
+                    width: 80px;
+                    height: auto;
+                }
+            }
+            .footer-content {
+                color: #fff;
+                white-space: nowrap;
+                font-size: 70%;
+                padding: 0 15px;
+                span {
+                    display: block;
+                    line-height: 1.8;
+                    color: #949494;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+            .footer-cer {
+                text-align: center;
+                padding: 0;
+                a {
+                    img {
+                        width: 130px;
+                    }
+                }
+            }
+        }
     }
 }
 @media (min-width: 768px) {
     .footer-qa,
-    .footer-partner {
+    .footer-partner,
+    .footer-social {
         width: 33.33333333%;
     }
     .footer-6 {
         width: 50%;
     }
+    .footer-imageLogo {
+        width: 8.33%;
+    }
+    .footer-content {
+        width: 75%;
+    }
+    .footer-cer {
+        width: 16.66%;
+    }
 }
 @media (max-width: 767.99px) {
     .footer-qa,
-    .footer-partner {
+    .footer-partner,
+    .footer-social {
         width: 100%;
+    }
+    .footer-company {
+        display: initial !important;
+        padding-bottom: 55px !important;
+    }
+    .footer-info {
+        display: block !important;
     }
 }
 @media (max-width: 992px) {
@@ -76,6 +147,13 @@
                 display: inline-block !important;
                 margin: 5px;
             }
+        }
+    }
+    .footer-content {
+        text-align: center !important;
+        span {
+            white-space: initial;
+            text-align: center;
         }
     }
     .mobile-first {

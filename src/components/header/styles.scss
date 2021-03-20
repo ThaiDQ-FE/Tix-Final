@@ -41,28 +41,41 @@
         .home-navbar-account {
             position: relative;
             cursor: pointer;
+            .login-wrapper {
+                display: flex;
+                img {
+                    height: auto;
+                    width: 30px;
+                    border-radius: 25px;
+                    margin-right: 5px;
+                }
+                .header-logined {
+                    display: flex;
+                    align-items: center;
+                    .fa-caret-down {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
             a {
                 color: #817e7e;
                 margin: inherit;
                 font-size: 13px;
                 padding: 0;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
                 img {
                     height: auto;
                     width: 30px;
                     border-radius: 25px;
-                    top: 50%;
-                    right: 47px;
-                    transform: translate(-47px, -50%);
-                    position: absolute;
                 }
                 p {
                     padding-left: 15px;
                     display: inline-block;
-                    position: absolute;
                     right: 5px;
                     width: 90px;
-                    top: 50%;
-                    transform: translate(-5px, -50%);
                 }
             }
         }

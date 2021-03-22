@@ -1,3 +1,120 @@
+.modal-trailer-css {
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.modal-profile-css {
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    min-height: 500px;
+    max-height: 500px;
+}
+@media (max-width: 991px) {
+    .modal-trailer-css {
+        width: 600px;
+        height: 50%;
+    }
+}
+@media (max-width: 1200px) and (min-width: 1000px) {
+    .modal-profile-css {
+        width: 75%;
+    }
+}
+@media (max-width: 999.99px) and (min-width: 767.99px) {
+    .modal-profile-css {
+        width: 85%;
+    }
+    .n-image,
+    .h-image {
+        width: 80% !important;
+        height: 50% !important;
+        top: 0 !important;
+        transform: translateX(-50%) !important;
+        min-height: 220px !important;
+        min-width: 220px !important;
+    }
+}
+@media (max-width: 767px) and(min-width: 646px) {
+    .modal-profile-css {
+        width: 90%;
+    }
+    .modal-wrapper {
+        grid-template-columns: 30% 1fr 1fr !important;
+    }
+    .n-image,
+    .h-image {
+        max-height: 200px !important;
+        max-width: 180px !important;
+        top: 0 !important;
+        transform: translateX(-50%) !important;
+    }
+}
+@media (max-width: 645.99px) and (min-width: 499.9px) {
+    .modal-profile-css {
+        width: 100%;
+        height: 100%;
+        max-height: unset;
+        border-radius: unset;
+    }
+    .modal-wrapper {
+        // grid-template-columns: 30% 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 0.5fr 1fr 1fr 5px !important;
+        grid-template-areas:
+            "info-header info-header"
+            "info-image info-image"
+            "content-1 content-2"
+            "content-1 content-2"
+            "content-5 content-5" !important;
+    }
+    .n-image,
+    .h-image {
+        width: 50% !important;
+        max-width: 220px !important;
+    }
+    .modal-trailer-close {
+        top: 0 !important;
+        right: 0 !important;
+    }
+}
+@media (max-width: 499.97px) {
+    .modal-profile-css {
+        width: 100%;
+        height: 100%;
+        max-height: unset;
+        border-radius: unset;
+    }
+    .modal-wrapper {
+        // grid-template-columns: 30% 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 0.5fr 1fr 1fr 200px !important;
+        grid-template-areas:
+            "info-header info-header"
+            "info-image info-image"
+            "content-1 content-1"
+            "content-2 content-2"
+            "content-5 content-5" !important;
+    }
+    .n-image,
+    .h-image {
+        height: 100% !important;
+        width: 50% !important;
+        max-width: 100px !important;
+    }
+    .modal-trailer-close {
+        top: 0 !important;
+        right: 0 !important;
+    }
+}
 .modal-trailer-close {
     position: absolute;
     top: -20px;
@@ -13,4 +130,98 @@
     width: 100%;
     height: 100%;
     border: none;
+}
+.MuiFormLabel-root.Mui-focused {
+    color: white !important;
+    opacity: 0.6;
+}
+.modal-form {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    .modal-wrapper {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        background: url(https://i.ibb.co/25zbMd2/open-clapper-board-with-film-strip-background-design.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 40% 1fr 1fr;
+        grid-template-rows: 140px 1fr 1fr 100px;
+        grid-gap: 1rem;
+        grid-template-areas:
+            "info-header info-header info-header"
+            "info-image content-1 content-2"
+            "info-image content-1 content-2"
+            "info-image content-5 content-5";
+        .info-header {
+            grid-area: info-header;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 26px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .info-image {
+            grid-area: info-image;
+            position: relative;
+            .input-file {
+                display: none;
+            }
+            label {
+                img {
+                    width: 50px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 5;
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+                &:hover img {
+                    opacity: 1;
+                }
+            }
+            .n-image,
+            .h-image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 5px;
+                width: 100%;
+                height: 80%;
+                max-width: 300px;
+                max-height: 300px;
+            }
+        }
+
+        .content-1 {
+            grid-area: content-1;
+        }
+
+        .content-2 {
+            grid-area: content-2;
+        }
+
+        .content-5 {
+            grid-area: content-5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.swal2-container {
+    z-index: 999999999999;
+}
+.swal2-popup {
+    padding: 0;
 }

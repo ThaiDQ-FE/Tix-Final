@@ -13,7 +13,6 @@ function Header() {
   const [profile, setProfile] = useState("profile");
 
   const isLogin = JSON.parse(localStorage.getItem("userInfo"));
-  console.log(isLogin);
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -28,6 +27,7 @@ function Header() {
     setMenu(event.currentTarget);
   };
   const handleOpen = () => {
+    setMenu(null);
     setOpen(true);
   };
   const handleClose = () => {
@@ -35,8 +35,9 @@ function Header() {
   };
   const handleCloseMenu = () => {
     setMenu(null);
-    // localStorage.removeItem("userInfo");
-    // window.location.reload(true);
+    localStorage.removeItem("userInfo");
+    localStorage.removeItem("detail-user");
+    window.location.reload(true);
   };
   const renderAccount = () => {
     if (isLogin == null) {

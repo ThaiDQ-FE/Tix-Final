@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Drawer from "@material-ui/core/Drawer";
 import { makeStyles } from "@material-ui/core/styles";
 import "./styles.scss";
 import { NavLink } from "react-router-dom";
+import ModalTrailer from "../modal-trailer";
 
 function DrawerComponent(props) {
   const useStyles = makeStyles({
@@ -10,6 +11,23 @@ function DrawerComponent(props) {
       width: `${70}%`,
     },
   });
+  const [profile, setProfile] = useState("profile");
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  let count = 0;
+  const handleClick = () => {
+    count++;
+    if (count % 2 !== 0) {
+      document.getElementById("drawer-login-child").classList.add("active");
+    } else {
+      document.getElementById("drawer-login-child").classList.remove("active");
+    }
+  };
   const classes = useStyles();
   const isLogin = JSON.parse(localStorage.getItem("userInfo"));
   const renderAccount = () => {
@@ -31,18 +49,28 @@ function DrawerComponent(props) {
       );
     } else {
       return (
-        <div className="drawer-login-title">
-          <div to="/login" className="drawer-nav-link">
-            <img src="https://i.ibb.co/znh3gRK/avatar.png" alt="avatar" />
-            <p>{isLogin.hoTen}</p>
-          </div>
-          <img
-            className="drawer-close"
-            src="https://i.ibb.co/k3ctpcW/next-session.png"
-            alt="next-session"
-            onClick={props.toggleDrawer}
-          />
-        </div>
+        <ul id="drawer-login-ul" onClick={handleClick}>
+          <li>
+            <div className="drawer-login-title">
+              <div to="/login" className="drawer-nav-link">
+                <img src="https://i.ibb.co/znh3gRK/avatar.png" alt="avatar" />
+                <p>{isLogin.hoTen}</p>
+              </div>
+              <img
+                className="drawer-close"
+                src="https://i.ibb.co/k3ctpcW/next-session.png"
+                alt="next-session"
+                onClick={props.toggleDrawer}
+              />
+            </div>
+            <ul className="drawer-login-child" id="drawer-login-child">
+              <li onClick={() => handleOpen()} className="li-child">
+                Profile
+              </li>
+              <li className="li-child">History</li>
+            </ul>
+          </li>
+        </ul>
       );
     }
   };
@@ -74,6 +102,7 @@ function DrawerComponent(props) {
           </a>
         </div>
       </Drawer>
+      <ModalTrailer open={open} close={handleClose} profile={profile} />
     </div>
   );
 }

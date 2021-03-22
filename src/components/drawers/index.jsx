@@ -33,7 +33,7 @@ function DrawerComponent(props) {
   const renderAccount = () => {
     if (isLogin == null) {
       return (
-        <div className="drawer-login-title">
+        <div className="drawer-login-titles">
           <NavLink to="/login" className="drawer-nav-link">
             <img src="https://i.ibb.co/znh3gRK/avatar.png" alt="avatar" />
 

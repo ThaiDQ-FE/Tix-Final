@@ -4,6 +4,8 @@ import {
   GET_MOVIE_LIST_FAILED,
   GET_MOVIE_DETAIL_SUCCESS,
   GET_MOVIE_DETAIL_FAILED,
+  GET_MOVIE_SCHEDULE_SUCCESS,
+  GET_MOVIE_SCHEDULE_FAILED,
 } from "../constants/movie.const";
 import { startLoading, stopLoading } from "./common.action";
 
@@ -70,6 +72,39 @@ const getMovieDetailSuccess = (movieDetail) => {
 const getMovieDetailFailed = (err) => {
   return {
     type: GET_MOVIE_DETAIL_FAILED,
+    payload: err,
+  };
+};
+
+export const getMovieSchedule = (movieCode) => {
+  return (dispatch) => {
+    dispatch(startLoading());
+    axios({
+      method: "GET",
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${movieCode}`,
+      data: null,
+    })
+      .then((res) => {
+        dispatch(stopLoading());
+        dispatch(getMovieScheduleSuccess(res.data));
+      })
+      .catch((err) => {
+        dispatch(stopLoading());
+        dispatch(getMovieScheduleFailed(err));
+      });
+  };
+};
+
+const getMovieScheduleSuccess = (movieSchedule) => {
+  return {
+    type: GET_MOVIE_SCHEDULE_SUCCESS,
+    payload: movieSchedule,
+  };
+};
+
+const getMovieScheduleFailed = (err) => {
+  return {
+    type: GET_MOVIE_SCHEDULE_FAILED,
     payload: err,
   };
 };

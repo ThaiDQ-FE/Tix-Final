@@ -100,6 +100,7 @@ function NewIn() {
   const dispatch = useDispatch();
   const { movieList } = useSelector((state) => state.movie);
   const [value, setValue] = React.useState(0);
+  const pathName = window.location.pathname;
   useEffect(function () {
     dispatch(getMovieList());
   }, []);
@@ -139,17 +140,23 @@ function NewIn() {
             onChange={handleChange}
             aria-label="simple tabs example"
           >
-            <Tab label="Đang Chiếu" {...a11yProps(0)} />
-            <Tab label="Sắp Chiếu" {...a11yProps(1)} />
+            <Tab
+              label={
+                pathName.includes("/shows-time") ? "Theo Phim" : "Đang Chiếu"
+              }
+              {...a11yProps(0)}
+            />
+            <Tab
+              label={
+                pathName.includes("/shows-time") ? "Theo Rạp" : "Sắp Chiếu"
+              }
+              {...a11yProps(1)}
+            />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
           <Swiper
-            // slidesPerView={6}
-            // slidesPerColumn={2}
-            // slidesPerGroup={4}
             spaceBetween={5}
-            // slidesPerColumnFill="row"
             navigation
             breakpoints={{
               1444: {
@@ -199,7 +206,9 @@ function NewIn() {
               },
             }}
           >
-            {renderListMovieNew()}
+            {pathName.includes("/shows-time")
+              ? "Đây là list rạp"
+              : renderListMovieNew()}
           </Swiper>
         </TabPanel>
       </MuiThemeProvider>

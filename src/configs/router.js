@@ -8,6 +8,7 @@ import LoadingHome from "../pages/user/home/loadingHome";
 import Login from "../pages/user/login";
 import LoadingLogin from "../pages/user/login/loadingLogin";
 import ShowTime from "../pages/user/shows-time";
+import ShowTimeFilm from "../pages/user/shows-time-film";
 
 export const userRouter = [
   {
@@ -29,6 +30,11 @@ export const userRouter = [
     path: "/shows-time",
     exact: false,
     Component: ShowTime,
+  },
+  {
+    path: "/shows-time-film/:maPhim",
+    exact: false,
+    Component: ShowTimeFilm,
   },
 ];
 

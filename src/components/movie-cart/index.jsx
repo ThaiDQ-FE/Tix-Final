@@ -3,8 +3,13 @@ import { withRouter } from "react-router-dom";
 
 import "./styles.scss";
 function MovieCart({ movie, history }) {
+  const pathName = window.location.pathname;
   const handleClick = () => {
-    history.push(`/movie-detail/${movie.maPhim}`);
+    {
+      pathName.includes("/shows-time")
+        ? history.push(`/shows-time-film/${movie.maPhim}`)
+        : history.push(`/movie-detail/${movie.maPhim}`);
+    }
   };
   return (
     <div className="card-movie">
@@ -16,10 +21,14 @@ function MovieCart({ movie, history }) {
           ></div>
           <div className="film-info">
             <span>{movie.tenPhim}</span>
-            <a href="#" className="film-link">
-              <img src="https://i.ibb.co/J3M5w4M/ticket.png" alt="ticket" />
-              &emsp;Mua Vé
-            </a>
+            {pathName.includes("/shows-time") ? (
+              ""
+            ) : (
+              <a href="#" className="film-link">
+                <img src="https://i.ibb.co/J3M5w4M/ticket.png" alt="ticket" />
+                &emsp;Mua Vé
+              </a>
+            )}
           </div>
         </div>
       </div>

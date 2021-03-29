@@ -17,10 +17,12 @@ class DetailMovie extends Component {
     const {
       params: { maPhim },
     } = this.props.match;
+    console.log(this.props.match);
     this.props.dispatch(getMovieDetail(maPhim));
   }
 }
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     movieDetail: state.movie.movieDetail,
     loading: state.common.loading,

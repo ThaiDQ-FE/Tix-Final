@@ -1,0 +1,13 @@
+.schedule-detail-wrapper {
+    position: relative;
+    color: white;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    .chedule-item {
+        width: 50%;
+    }
+    .chedule-items {
+        width: 50%;
+    }
+}
